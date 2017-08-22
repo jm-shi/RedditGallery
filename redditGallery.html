@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reddit Gallery</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/redditGallery.css">
+	<script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/redditGallery.js"></script>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target='#filter'>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand">Reddit Gallery</a>
+			</div>
+			<div class="collapse navbar-collapse" id="filter">
+				<ul class="nav navbar-nav">
+					<li><a href="#" id="hot" onclick="sortGallery(this.id);return false;">Hot</a></li>
+					<li><a href="#" id="new" onclick="sortGallery(this.id);return false;">New</a></li>
+					<li><a href="#" id="rising" onclick="sortGallery(this.id);return false;">Rising</a></li>
+					<li class="dropdown" id="controversial-dropdown">
+						<a data-toggle="dropdown" href="#" id="controversial">Controversial<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" id="hour" onclick="sortGallery('controversial', this.id);return false;">Past hour</a></li>
+							<li><a href="#" id="day" onclick="sortGallery('controversial', this.id);return false;">Past 24 hours</a></li>
+							<li><a href="#" id="week" onclick="sortGallery('controversial', this.id);return false;">Past week</a></li>
+							<li><a href="#" id="month" onclick="sortGallery('controversial', this.id);return false;">Past month</a></li>
+							<li><a href="#" id="year" onclick="sortGallery('controversial', this.id);return false;">Past year</a></li>
+							<li><a href="#" id="all" onclick="sortGallery('controversial', this.id);return false;">All time</a></li>
+						</ul>
+					</li>
+					<li class="dropdown" id="top-dropdown">
+						<a data-toggle="dropdown" href="#" id="top">Top<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" id="hour" onclick="sortGallery('top', this.id);return false;">Past hour</a></li>
+							<li><a href="#" id="day" onclick="sortGallery('top', this.id);return false;">Past 24 hours</a></li>
+							<li><a href="#" id="week" onclick="sortGallery('top', this.id);return false;">Past week</a></li>
+							<li><a href="#" id="month" onclick="sortGallery('top', this.id);return false;">Past month</a></li>
+							<li><a href="#" id="year" onclick="sortGallery('top', this.id);return false;">Past year</a></li>
+							<li><a href="#" id="all" onclick="sortGallery('top', this.id);return false;">All time</a></li>
+						</ul>
+					</li>
+					<li><a href="#" id="gilded" onclick="sortGallery(this.id);return false;">Gilded</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row text-center">
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
